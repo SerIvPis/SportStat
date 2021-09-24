@@ -117,7 +117,7 @@ namespace Library
 
         public override string ToString()
         {
-            return $" {nameTournament} {dataMatch} {Round} Тур {HomeTeam.Name} {HomeGoal} : {GuestGoal} {GuestTeam.Name} Played = {isPlayed} ";
+            return $" {nameTournament} {dataMatch.ToShortDateString()} {Round} Тур {HomeTeam.Name} {HomeGoal} : {GuestGoal} {GuestTeam.Name} Played = {isPlayed} ";
         }
 
         #endregion
