@@ -1,0 +1,7 @@
+C:\Users\monsu\source\SportStat\Main\bin\Release\net5.0\publish\Main.exe
+C:\Users\monsu\source\SportStat\Main\bin\Release\net5.0\publish\Main.dll
+C:\Users\monsu\source\SportStat\Main\bin\Release\net5.0\publish\Main.deps.json
+C:\Users\monsu\source\SportStat\Main\bin\Release\net5.0\publish\Main.runtimeconfig.json
+C:\Users\monsu\source\SportStat\Main\bin\Release\net5.0\publish\Main.pdb
+C:\Users\monsu\source\SportStat\Main\bin\Release\net5.0\publish\Library.dll
+C:\Users\monsu\source\SportStat\Main\bin\Release\net5.0\publish\Library.pdb
