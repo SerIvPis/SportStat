@@ -15,10 +15,12 @@ namespace Main
             WatchSourceFileTxt watch = new WatchSourceFileTxt();
 
             //Создания турнира по исходному текстому файлу
-            Tournament tournament = new Tournament("Пример");
-            List<string> FileText = new List<string>(File.ReadAllLines( watch.workDir.GetFiles()[0].FullName)); 
-            tournament.ImportMatches(FileText);
-            tournament.PrintCalendar();
+
+            string PathFile =  watch.workDir.GetFiles()[0].FullName;
+            List<string> ListStr = new List<string>(File.ReadAllLines( PathFile)); 
+            Tournament tournament = new Tournament(watch.workDir.GetFiles()[0].Name , ListStr);
+            tournament.PrintTable();            
+            //tournament.PrintCalendar();
          
             Console.Read();
         }

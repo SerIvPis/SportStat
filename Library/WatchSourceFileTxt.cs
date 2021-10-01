@@ -12,25 +12,32 @@ namespace Library
     /// </summary>
     public class WatchSourceFileTxt
     {
-        public FileSystemWatcher Watcher;
-        public  DirectoryInfo workDir;
-        const string PathSource = @".\Source\";
-        const string PathImport = @".\Source\Import\";
-        private List<string> ListText;
-        private DirectoryInfo ImportDir;
+        
+    #region Свойства и поля
+    public FileSystemWatcher Watcher;
+    public  DirectoryInfo workDir;
+    public DirectoryInfo ImportDir;
+    const string PathSource = @".\Source\";
+    const string PathImport = @".\Source\Import\";
+    private List<string> ListText;
+    
 
-        public WatchSourceFileTxt()
+         
+    #endregion
+
+    #region Конструкторы
+     public WatchSourceFileTxt()
         {
            
             workDir = new DirectoryInfo(PathSource);
             if (!workDir.Exists)
             {
-                 workDir.Create();
+                workDir.Create();
             }
             ImportDir = new DirectoryInfo(PathImport);
             if (!ImportDir.Exists)
             {
-                 ImportDir.Create();
+                ImportDir.Create();
             }
            
            Watcher = new FileSystemWatcher(PathSource);
@@ -48,19 +55,38 @@ namespace Library
             
         }
 
+     public WatchSourceFileTxt(string _path)
+        {
+            
+            
+        }
+         
+    #endregion
+
+    #region Методы
+    
         private void OnCreated(object sender, FileSystemEventArgs e)
         {
             //считывает данные из файла в список строк
             ListText = new List<string>(File.ReadAllLines( e.FullPath));                    
-            ListText = FormatList(ListText);     
+            ListText = FormatList(ListText);   
+            DeleteDuplicateMatch(ListText);  
             SaveFile( e.FullPath);
         }
 
-        public WatchSourceFileTxt(string _path)
+        /// <summary>
+        /// Метод убирает дубликаты матчей из списка
+        /// по средствам использования HashSet множества
+        /// </summary>
+        /// <param name="listText"></param>
+        private void DeleteDuplicateMatch(List<string> listText)
         {
-            
-            
+            HashSet<string> noDuplicateSet = new HashSet<string>(listText);
+            listText.Clear();
+            listText.AddRange(noDuplicateSet);
         }
+
+
 
         /// <summary>
         /// обрабатываем строки и приводим их к стандартному виду
@@ -105,6 +131,8 @@ namespace Library
                    _res.Add(string.Join(' ', bufString, line));
                }
             }
+
+
             return _res;
         }
 
@@ -139,5 +167,9 @@ namespace Library
                 Console.WriteLine($"Редакция файла {_path} - ОК");
             }
         }
+    
+    #endregion
+       
+      
     }
 }

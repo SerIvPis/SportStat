@@ -1,48 +1,59 @@
+using System;
+using System.Collections.Generic;
 namespace Library
 {
     /// <summary>
     /// Команда
     /// </summary>
-    public class Team
+    public class Team: IComparable<Team>, IEquatable<Team>
     {
-        /// Название команды
+        /// Имя команды
         public string Name { get; private set; }
         public Team() { }
         public Team(string _name) => Name = _name;
-    }
-
-    /// <summary>
-    /// Команда в таблице
-    /// </summary>
-    public class TeamTable : Team
-    {
-        public byte Win { get; private set; }
-        public byte Draw { get; private set; }
-        public byte Lost { get; private set; }
-        public byte Points { get; private set; }
-        public byte GoalFor { get; private set; }
-        public byte GoalAgainst { get; private set; }
-        public byte GoalDifference { get; private set; }
-        public byte PlayedMatch { get; private set; }
-       
-         public TeamTable(string _name):base()
-        {
-            
-        }
 
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            if (obj == null)
+                return false;
+
+            if (object.ReferenceEquals(this, obj))
+                return true;
+
+            Team team = obj as Team;
+            if (team == null)
+                return false;
+            else
+                return this.Equals(team);
         }
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return Name.GetHashCode();
         }
 
         public override string ToString()
         {
-            return $"{Name} W = {Win}\tD = {Draw}\tL = {Lost}\tGF = {GoalFor}\tGA = {GoalAgainst}\tGD= {GoalDifference}\tPoints = {Points}";
+            return $"{Name}";
+        }
+
+        public int CompareTo(Team other)
+        {
+           return this.Name.CompareTo(other.Name);
+        }
+
+        public bool Equals(Team other)
+        {
+            if (other == null)
+                return false;
+
+            if (this.Name.Equals(other.Name))
+            {
+                return true;
+            }
+            else
+                return false;
+           
         }
     }
 }
