@@ -103,6 +103,7 @@ namespace Library
         {
             foreach (Match item in Matches)
             {
+               
                 System.Console.WriteLine(item.ToString());
             }
         }
@@ -110,10 +111,11 @@ namespace Library
         public void PrintTable()
         {
             TeamsInTable.Sort();
-            System.Console.WriteLine($"{"Команды",-23}{"W",3}{"D",3}{"L",3}{"GF",3}{"GA",3}{"GD",3}{"Pts",4}");
+            System.Console.WriteLine($"{"Команды",-23}{"W",3}{"D",3}{"L",3}{"GF",3}{"GA",3}{"GD",3}{"Pts",4}{"Gms",4}");
 
             foreach (var item in TeamsInTable)
             {
+                System.Console.WriteLine(new string('-',50));
                 System.Console.WriteLine(item.ToString());
             }
         }

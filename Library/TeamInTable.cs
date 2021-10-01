@@ -126,7 +126,7 @@ namespace Library
 
         public override string ToString()
         {
-            return $"{TeamName,-23}{Win,3}{Draw,3}{Lost,3}{GoalFor,3}{GoalAgainst,3}{GoalDifference,3}{Points,3}";
+            return $"{TeamName,-23}{Win,3}{Draw,3}{Lost,3}{GoalFor,3}{GoalAgainst,3}{GoalDifference,3}{Points,3}{TotalGames,4}";
         }
 
         public bool Equals(TeamInTable other)
