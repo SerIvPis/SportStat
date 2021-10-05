@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace Library
+namespace Eleron.FootballStatistic.TournamentData
 {
     public class Match: IEquatable<Match>, IComparable<Match>
     {

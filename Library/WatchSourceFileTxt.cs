@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Library
+namespace Eleron.FootballStatistic.TournamentData
 {
     /// <summary>
     /// Класс наблюдает за папкой Source, и в случаи добавления

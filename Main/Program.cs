@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Library;
+using Eleron.FootballStatistic.TournamentData;
 
-namespace Main
+namespace Eleron.FootballStatistic.Main
 {
     class Program
     {
@@ -15,13 +15,13 @@ namespace Main
             WatchSourceFileTxt watch = new WatchSourceFileTxt();
 
             //Создания турнира по исходному текстому файлу
-
-            string PathFile =  watch.workDir.GetFiles()[0].FullName;
+          
+            string PathFile =  watch.workDir.GetFiles()[1].FullName;
             List<string> ListStr = new List<string>(File.ReadAllLines( PathFile)); 
-            Tournament tournament = new Tournament(watch.workDir.GetFiles()[0].Name , ListStr);
+            Tournament tournament = new Tournament(watch.workDir.GetFiles()[1].Name , ListStr);
             tournament.PrintTable();            
             //tournament.PrintCalendar();
-         
+            
             Console.Read();
         }
     }

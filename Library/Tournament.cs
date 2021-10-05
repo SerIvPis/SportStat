@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Library
+namespace Eleron.FootballStatistic.TournamentData
 {
     /// <summary>
     /// Класс турнир
@@ -10,14 +10,14 @@ namespace Library
     public class Tournament
     {
         #region Свойства и поля
-             // Название команды
+         // Название команды
         public string Name { get; private set; }
         //
         public List<TeamInTable> TeamsInTable { get; private set; }
         // Матчи турнира
         public HashSet<Match> Matches; 
 
-        #endregion
+        #endregion Свойства и поля
        
         #region Конструкторы
         public Tournament()
@@ -42,7 +42,6 @@ namespace Library
 
         private void AddResults()
         {
-            //List<Match> nMatches = new List<Match>(Matches);
             foreach (TeamInTable item in TeamsInTable)
             {
                IEnumerable<Match> seq = Matches

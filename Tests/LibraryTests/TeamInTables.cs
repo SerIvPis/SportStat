@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using Library;
+using Eleron.FootballStatistic.TournamentData;
 
 namespace LibraryTests
 {
