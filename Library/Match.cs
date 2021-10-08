@@ -115,7 +115,7 @@ namespace Eleron.FootballStatistic.TournamentData
         private void TakeOfNamesTeam(string strMatch)
         {
             string strNameTeam = strMatch.Substring(10, strMatch.IndexOf(":") - 13);  
-            string[] NameTeam = strNameTeam.Split('-', StringSplitOptions.TrimEntries);
+            string[] NameTeam = strNameTeam.Split(" - ", StringSplitOptions.TrimEntries);
             HomeTeam = new Team(NameTeam[0]);
             GuestTeam = new Team(NameTeam[1]);  
         }
