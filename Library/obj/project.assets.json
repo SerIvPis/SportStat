@@ -8,23 +8,24 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\monsu\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\SeIvPi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj",
+      "projectUniqueName": "C:\\Users\\SeIvPi\\source\\repos\\SportStat\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj",
-      "packagesPath": "C:\\Users\\monsu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\monsu\\source\\SportStat\\Library\\obj\\",
+      "projectPath": "C:\\Users\\SeIvPi\\source\\repos\\SportStat\\Library\\Library.csproj",
+      "packagesPath": "C:\\Users\\SeIvPi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SeIvPi\\source\\repos\\SportStat\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\monsu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SeIvPi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
