@@ -7,61 +7,83 @@ using System.Linq.Expressions;
 using System.Reflection;
 using Eleron.FootballStatistic.TournamentData;
 using Library;
+using System.Data.Linq;
 
 namespace Eleron.FootballStatistic.Main
 {
+    public class PhoneNumber
+{
+    public string Number { get; set; }
+}
+
+public class Person
+{
+    public IEnumerable<PhoneNumber> PhoneNumbers { get; set; }
+    public string Name { get; set; }
+}
+
+
+
+
     class Program
     {
         
 
         static void Main(string[] args)
         {
-            /* var queryOperators =from method in typeof(Enumerable).GetMethods()
-                                group method by method.Name into queryOperator
-                                orderby queryOperator.Key
-                                select new {
-                                    Operator = queryOperator.Key,
-                                    Overloads = queryOperator.Count()
-                                };
-            
-            foreach (var qo in queryOperators)
-            {
-                System.Console.WriteLine(qo.ToString());
-            }
- */
-
+            #region Скрытое
+           
+                 
+            #endregion
+           
+           
             Console.WriteLine("--- Start  SportStat ---\n");
 
             //Контроль за папкой источник 
-            WatchSourceFileTxt watch = new WatchSourceFileTxt();
+           // WatchSourceFileTxt watch = new WatchSourceFileTxt();
 
             //Создания турнира по исходному текстому файлу
-          
-            string PathFile =  watch.workDir.GetFiles()[1].FullName;
-            List<string> ListStr = new List<string>(File.ReadAllLines( PathFile)); 
-            Tournament tournament = new Tournament(watch.workDir.GetFiles()[1].Name , ListStr);
+          try
+          {
 
-            var pointsTeams = from match in tournament.Matches
-                                where match.HomeTeam.Equals(new Team("Монако")) || match.GuestTeam.Equals(new Team("Монако"))  
-                                select match;
-                                
-                                
+            ScoresAndFixtures scoresAndFixtures = new ScoresAndFixtures();
 
-             
+            var Sequince = scoresAndFixtures.Matches
+                                .Where( m => m.dataMatch > new DateTime(2021,4,10) )
+                                .Where( m => m.dataMatch < new DateTime(2021,4,20))
+                                .Select(m => m);
+
+
+             foreach (var team in Sequince)
+            {
+                System.Console.WriteLine(team);
+            } 
+
+            /* Tournament tournament = new Tournament(dupl.Name , ListStr);
+
+            var pointsTeams = tournament.Matches
+                                .Where(m => m.HomeGoal <= 1) 
+                                .Where(m => m.isPlayed)   
+                                .TakeWhile(m => m.Round <= 3)   
+                                .Reverse()                          
+                                .Select(r => r);                           
+                                
             foreach (var team in pointsTeams)
             {
                 System.Console.WriteLine(team);
-                /* foreach (var item in team)
-                {
-                    System.Console.WriteLine(item);
-                } */
-            }
-            
+            } */
 
+             Console.Read();
+          }
+          catch (System.Exception)
+          {
+              System.Console.WriteLine("Что-то пошло не так...");
+              
+          }
             // tournament.PrintTable();            
             //tournament.PrintCalendar();
             
-            Console.Read();
+           
 
         }
     }

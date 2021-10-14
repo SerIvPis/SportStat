@@ -17,3 +17,12 @@ C:\Users\monsu\source\SportStat\Main\obj\Debug\net5.0\Main.dll
 C:\Users\monsu\source\SportStat\Main\obj\Debug\net5.0\ref\Main.dll
 C:\Users\monsu\source\SportStat\Main\obj\Debug\net5.0\Main.pdb
 C:\Users\monsu\source\SportStat\Main\obj\Debug\net5.0\Main.genruntimeconfig.cache
+C:\Users\monsu\source\SportStat\Main\bin\Debug\net5.0\Mindbox.Data.Linq.dll
+C:\Users\monsu\source\SportStat\Main\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\monsu\source\SportStat\Main\bin\Debug\net5.0\System.Data.SQLite.Linq.dll
+C:\Users\monsu\source\SportStat\Main\bin\Debug\net5.0\System.Security.Permissions.dll
+C:\Users\monsu\source\SportStat\Main\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\monsu\source\SportStat\Main\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\monsu\source\SportStat\Main\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\monsu\source\SportStat\Main\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\monsu\source\SportStat\Main\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

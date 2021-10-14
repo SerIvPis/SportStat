@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\LibraryTests.csproj": {}
+    "c:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\LibraryTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj": {
+    "c:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj",
+        "projectUniqueName": "c:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj",
+        "projectPath": "c:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\monsu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\monsu\\source\\SportStat\\Library\\obj\\",
+        "outputPath": "c:\\Users\\monsu\\source\\SportStat\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,6 +42,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Data.SQLite.Linq": {
+              "target": "Package",
+              "version": "[1.0.91, )"
+            },
+            "netstandard-System.Data.Linq": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\LibraryTests.csproj": {
+    "c:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\LibraryTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\LibraryTests.csproj",
+        "projectUniqueName": "c:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\LibraryTests.csproj",
         "projectName": "LibraryTests",
-        "projectPath": "C:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\LibraryTests.csproj",
+        "projectPath": "c:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\LibraryTests.csproj",
         "packagesPath": "C:\\Users\\monsu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\obj\\",
+        "outputPath": "c:\\Users\\monsu\\source\\SportStat\\Tests\\LibraryTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -88,8 +98,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj": {
-                "projectPath": "C:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj"
+              "c:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj": {
+                "projectPath": "c:\\Users\\monsu\\source\\SportStat\\Library\\Library.csproj"
               }
             }
           }
